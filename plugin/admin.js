@@ -1,5 +1,13 @@
+/* Copyright (C) 2021 T-REX
+
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+
+T-REX HIRUWA
+*/
+
 const {MessageType, GroupSettingChange, ChatModification, WAConnectionTest} = require('@adiwajshing/baileys');
-const Asena = require('../events');
+const Trex = require('../events');
 const Config = require('../config');
 const got = require("got");
 
@@ -15,12 +23,12 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     return sonuc.includes(true);
 }
 
-Asena.addrex({pattern: 'admin', desc: Lang.ADMINDESC, fromMe: true,  deleteCommand: false,  dontAddCommandList: false}, (async (message, match) => {    
+Trex.addrex({pattern: 'admin', desc: Lang.ADMINDESC, fromMe: true,  deleteCommand: false,  dontAddCommandList: false}, (async (message, match) => {    
 
     await message.sendMessage(Lang.AD_DESC);
 }));
 
-Asena.addrex({pattern: 'ban ?(.*)', fromMe: true,  deleteCommand: false,  onlyGroup: true, desc: Lang.BAN_DESC, dontAddCommandList: true}, (async (message, match) => {  
+Trex.addrex({pattern: 'ban ?(.*)', fromMe: true,  deleteCommand: false,  onlyGroup: true, desc: Lang.BAN_DESC, dontAddCommandList: true}, (async (message, match) => {  
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
@@ -34,7 +42,7 @@ Asena.addrex({pattern: 'ban ?(.*)', fromMe: true,  deleteCommand: false,  onlyGr
                 etiketler += '@' + user.split('@')[0] + ',';
             });
 
-
+            await message.client.sendMessage(message.jid,etiketler + '```, ' + Lang.BANNED + '```', MessageType.text, {contextInfo: {mentionedJid: message.mention}});
             await message.client.groupRemove(message.jid, message.mention);
         } else {
             return await message.client.sendMessage(message.jid,Lang.GIVE_ME_USER,MessageType.text);
@@ -58,7 +66,7 @@ Asena.addrex({pattern: 'ban ?(.*)', fromMe: true,  deleteCommand: false,  onlyGr
     }
 }));
 
-Asena.addrex({pattern: 'add(?: |$)(.*)', fromMe: true,  deleteCommand: false,  onlyGroup: true, desc: Lang.ADD_DESC, dontAddCommandList: true}, (async (message, match) => {  
+Trex.addrex({pattern: 'add(?: |$)(.*)', fromMe: true,  deleteCommand: false,  onlyGroup: true, desc: Lang.ADD_DESC, dontAddCommandList: true}, (async (message, match) => {  
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
@@ -92,7 +100,7 @@ Asena.addrex({pattern: 'add(?: |$)(.*)', fromMe: true,  deleteCommand: false,  o
     }
 }));
 
-Asena.addrex({pattern: 'promote ?(.*)', fromMe: true,  deleteCommand: false,  onlyGroup: true, desc: Lang.PROMOTE_DESC, dontAddCommandList: true}, (async (message, match) => {    
+Trex.addrex({pattern: 'promote ?(.*)', fromMe: true,  deleteCommand: false,  onlyGroup: true, desc: Lang.PROMOTE_DESC, dontAddCommandList: true}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
@@ -150,7 +158,7 @@ Asena.addrex({pattern: 'promote ?(.*)', fromMe: true,  deleteCommand: false,  on
     }
 }));
 
-Asena.addrex({pattern: 'demote ?(.*)', fromMe: true,  deleteCommand: false,  onlyGroup: true, desc: Lang.DEMOTE_DESC, dontAddCommandList: true}, (async (message, match) => {    
+Trex.addrex({pattern: 'demote ?(.*)', fromMe: true,  deleteCommand: false,  onlyGroup: true, desc: Lang.DEMOTE_DESC, dontAddCommandList: true}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN);
 
@@ -208,7 +216,7 @@ Asena.addrex({pattern: 'demote ?(.*)', fromMe: true,  deleteCommand: false,  onl
     }
 }));
 
-Asena.addrex({pattern: 'mute ?(.*)', fromMe: true,  deleteCommand: false,  onlyGroup: true, desc: Lang.MUTE_DESC, dontAddCommandList: true}, (async (message, match) => {    
+Trex.addrex({pattern: 'mute ?(.*)', fromMe: true,  deleteCommand: false,  onlyGroup: true, desc: Lang.MUTE_DESC, dontAddCommandList: true}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
@@ -1564,7 +1572,7 @@ Asena.addrex({pattern: 'mute ?(.*)', fromMe: true,  deleteCommand: false,  onlyG
     }
 }));
 
-Asena.addrex({pattern: 'unmute ?(.*)', fromMe: true,  deleteCommand: false,  onlyGroup: true, desc: Lang.UNMUTE_DESC, dontAddCommandList: true}, (async (message, match) => {    
+Trex.addrex({pattern: 'unmute ?(.*)', fromMe: true,  deleteCommand: false,  onlyGroup: true, desc: Lang.UNMUTE_DESC, dontAddCommandList: true}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
@@ -1578,14 +1586,14 @@ Asena.addrex({pattern: 'unmute ?(.*)', fromMe: true,  deleteCommand: false,  onl
     }
 }));
 
-Asena.addrex({pattern: 'clear', fromMe: true,  deleteCommand: false,  desc: Lang.END, dontAddCommandList: true}, (async (message, match) => {
+Trex.addrex({pattern: 'clear', fromMe: true,  deleteCommand: false,  desc: Lang.END, dontAddCommandList: true}, (async (message, match) => {
 
-    await message.sendMessage('```🔴  ➢ Chat clearing...```');
+    await message.sendMessage('```🖲️  ➢ Chat clearing...```');
     await message.client.modifyChat (message.jid, ChatModification.delete);
-    await message.sendMessage('```✅All Chat cleared 🚮```');
+    await message.sendMessage('```🖲️  ➢ All Chat cleared```');
 }));
 
-Asena.addrex({pattern: 'gname ?(.*)', onlyGroup: true, fromMe: true,  deleteCommand: false,  dontAddCommandList: true}, (async (message, match) => {
+Trex.addrex({pattern: 'gname ?(.*)', onlyGroup: true, fromMe: true,  deleteCommand: false,  dontAddCommandList: true}, (async (message, match) => {
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
@@ -1596,7 +1604,7 @@ Asena.addrex({pattern: 'gname ?(.*)', onlyGroup: true, fromMe: true,  deleteComm
     }
 ));
 
-Asena.addrex({pattern: 'invite ?(.*)', fromMe: true, dontAdCommandList: true, onlyGroup: true, desc: Lang.INVITE_DESC}, (async (message, match) => {    
+Trex.addrex({pattern: 'invite ?(.*)', fromMe: true, dontAdCommandList: true, onlyGroup: true, desc: Lang.INVITE_DESC}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN, MessageType.text);
     var invite = await message.client.groupInviteCode(message.jid);
@@ -1604,11 +1612,11 @@ Asena.addrex({pattern: 'invite ?(.*)', fromMe: true, dontAdCommandList: true, on
 
 }));
 /*
-Asena.addrex({pattern: 'search ?(.*)', fromMe: true,  deleteCommand: false,  desc: Lang.SEARCH, dontAddCommandList: true}, async (message, match) => {
+Trex.addrex({pattern: 'search ?(.*)', fromMe: true,  deleteCommand: false,  desc: Lang.SEARCH, dontAddCommandList: true}, async (message, match) => {
     const url = `https://gist.github.com/DARKCRIME1/e59aa70790d6238bf88a2aed62357ff9/raw`;
         const response = await got(url);
         const json = JSON.parse(response.body);
-        if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '*🔴KING BOT supported plugins🔴*\n\nYou can install these plugins by *.install _<plugin_link>_*\nExample : .install https://gist.github.com/BlackAmda/a06509cf406c3eb172e5173900d0ef87\n\n' + json.sinhala, MessageType.text);
+        if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '*🍁 T Rex BOT supported plugins 🍁*\n\nYou can install these plugins by *.plug _<plugin_link>_*\nExample : .plug https://gist.github.com/BlackAmda/a06509cf406c3eb172e5173900d0ef87\n\n' + json.sinhala, MessageType.text);
 });*/
 
 module.exports = {
