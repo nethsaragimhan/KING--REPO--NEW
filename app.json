@@ -1,21 +1,13 @@
 {
-    "name": "ALPHA V 4.0.0",
-    "description": "World Best Whatsapp Bot",
-    "logo": "https://telegra.ph/file/10bdbaab2d4d163e2affa.jpg",
-    "keywords": ["Trex", "T-REX"],
+    "name": "[🇱🇰𝐊𝐢𝐧𝐠 𝐁𝐨𝐭✌️] WhatsApp User Bot v1.0.0",
+    "description": "World best Sinhala/English WhatsApp Bot Developer 𝙽𝙴𝚃𝙷𝚂𝙰𝚁𝙰 𝙶𝙸𝙼𝙷𝙰𝙽 Enjoy Our Bot",
+    "logo": "https://telegra.ph/file/24b9b8507613125d34bd1.jpg",
+    "keywords": ["Nethsara Gimhan | PG", "King Bot"],
     "stack": "container",
     "env": {
-      "TREX_SESSION": {
-            "description": "Paste your QR session that you got from https://replit.com/@TRexWa/T-REX-QR-SESSION .",
+      "KINGBOT_SESSION": {
+            "description": "Paste your QR session that you got from https://replit.com/@ACSamankumara/King-bot-2.",
             "required": true
-        },
-        "BUTTON_CMD": {
-            "description": "YOU NEED BUTTON COMMANDS TYPE ( btn ) YOU NEED TEXT COMMAND TYPE ( txt ) බටන් කමාන්ඩ් සමහර ෆෝන් වලට වැඩ කරන් නෑ..",
-            "value":"btn"
-        },
-        "MENU_CMD": {
-            "description": "TYPE YOUR MENU COMMAND.",
-            "value":"alpha"
         },
         "ALIVE_LOGO": {
             "description": "If you do not want to change Alive Logo put here to your image direct link or, type default.",
@@ -23,20 +15,20 @@
             "value": "default"
         },
         "SONG_UPLOAD": {
-            "description": "SONG UPLOAFING MESSAGE",
-            "value": "╔╦══• •✠•❀•✠ • •══╦╗\n          ☃️тяєx cяʜısтмαs☃️\n        ᴜᴘʟᴏᴅɪɴɢ ʏᴏᴜʀ sᴏɴɢ\n             ■■■■■100%\n╚╩══• •✠•❀•✠ • •══╩╝"
+            "description": "SONG UPLOADING MESSAGE",
+            "value": "*ඔබගේ ගීතය 🅄🄿🄻🄾🄰🄳 කරමින් පවතියි⃝⃝̈̍̍̍̈̇̑🔥̥̥̥̥̤̤̤⃟⃟✨᭄*\n\n00:00 ●━━━━━━━━━━━━ 03:30 \n    ⇆        ◁ㅤㅤ❚❚ㅤㅤ▷          ↻\n\n════════════❀⦂⦁◦►\n𝙿𝙾𝚆𝙴𝚁𝙴𝙳 ʙʏ  [🇱🇰𝐊𝐢𝐧𝐠 𝐁𝐨𝐭✌️]\n════════════❀⦂⦁◦►"
         },
         "SONG_DOWNLOAD": {
             "description": "SONG DOWNLOADING MESSAGE",
-            "value": "╔╦══• •✠•❀•✠ • •══╦╗\n         ☃️тяєx cяʜısтмαs☃️\n      sᴇᴀʀᴄʜɪɴɢ ʏᴏᴜʀ sᴏɴɢ\n              ■■□□□40%\n╚╩══• •✠•❀•✠ • •══╩╝"
+            "value": "*ඔබගේ ගීතය 🄳🄾🅆🄽🄻🄾🄰🄳 කරමින් පවතියි⃝⃝̈̍̍̍̈̇̑🔥̥̥̥̥̤̤̤⃟⃟✨᭄*\n\n00:00 ●━━━━━━━━━━━━ 03:30 \n    ⇆        ◁ㅤㅤ❚❚ㅤㅤ▷          ↻\n\n════════════❀⦂⦁◦►\n𝙿𝙾𝚆𝙴𝚁𝙴𝙳 ʙʏ  [🇱🇰𝐊𝐢𝐧𝐠 𝐁𝐨𝐭✌️]\n════════════❀⦂⦁◦►"
         },
         "VIDEO_UPLOAD": {
             "description": "VIDEO UPLOADING MESSAGE",
-            "value":"╔╦══• •✠•❀•✠ • •══╦╗\n          ☃️тяєx cяʜısтмαs☃️\n        ᴜᴘʟᴏᴅɪɴɢ ʏᴏᴜʀ ᴠɪᴅᴇᴏ\n             ■■■■■100%\n╚╩══• •✠•❀•✠ • •══╩╝"
+            "value":"*ඔබගේ වීඩියෝව 🄳🄾🅆🄽🄻🄾🄰🄳 කරමින් පවතියි⃝⃝̈̍̍̍̈̇̑🔥̥̥̥̥̤̤̤⃟⃟✨᭄*\n\n00:00 ●━━━━━━━━━━━━ 03:30 \n    ⇆        ◁ㅤㅤ❚❚ㅤㅤ▷          ↻\n\n════════════❀⦂⦁◦►\n𝙿𝙾𝚆𝙴𝚁𝙴𝙳 ʙʏ  [🇱🇰𝐊𝐢𝐧𝐠 𝐁𝐨𝐭✌️]\n════════════❀⦂⦁◦►"
         },
         "VIDEO_DOWNLOAD": {
             "description": "VIDEO DOWNLOADING MESSAGE",
-            "value":"╔╦══• •✠•❀•✠ • •══╦╗\n         ☃️тяєx cʜяısтмαs☃️\n      sᴇᴀʀᴄʜɪɴɢ ʏᴏᴜʀ ᴠɪᴅᴇᴏ\n              ■■□□□40%\n╚╩══• •✠•❀•✠ • •══╩╝"
+            "value":"*ඔබගේ වීඩියෝව 🅄🄿🄻🄾🄰🄳 කරමින් පවතියි⃝⃝̈̍̍̍̈̇̑🔥̥̥̥̥̤̤̤⃟⃟✨᭄*\n\n00:00 ●━━━━━━━━━━━━ 03:30 \n    ⇆        ◁ㅤㅤ❚❚ㅤㅤ▷          ↻\n\n════════════❀⦂⦁◦►\n𝙿𝙾𝚆𝙴𝚁𝙴𝙳 ʙʏ  [🇱🇰𝐊𝐢𝐧𝐠 𝐁𝐨𝐭✌️]\n════════════❀⦂⦁◦►"
         },
         "TIME_ZONE": {
             "description": "YOUR COUNTRY TIME ZONE ලන්කාවෙ අය තියන විදිහට තියන්න..",
@@ -49,12 +41,12 @@
         "LANGUAGE": {
             "description": "Enter your language. To enable Sinhala, type SI. or to enable English, type EN.",
             "required": true,
-            "value": "si"
+            "value": "SI"
         },
         "WELCOME": {
             "description": "Welcome message type pp or gif",
             "required": true,
-            "value": "pp"
+            "value": "gif"
         },
         "AUTO_BIO": {
             "description": "Setup AUTO BIO feature. Adding a live clock for your WhatsApp about.",
@@ -79,34 +71,10 @@
         "GROUP_RULES": {
             "description": "Set your group Rules.",
             "required": true,
-            "value": "No Rules"
+            "value": "*ɴᴏ ʀᴜʟᴇs ᴀʀᴇ ᴀᴅᴅᴇᴅ ʙʏ ɢʀᴏᴜᴘ ᴀᴅᴍɪɴs*"
         },
         "GROUP_DETAILS": {
-            "description": "Set You Group.",
-            "required": false,
-            "value": "default"
-        },
-        
-        "WARN_MSG_1": {
-            "description": "Set You 1 Group warn.",
-            "required": false,
-            "value": "default"
-        },
-        
-        "WARN_MSG_2": {
-            "description": "Set You 2 Group warn.",
-            "required": false,
-            "value": "default"
-        },
-        
-        "WARN_MSG_3": {
-            "description": "Set You 3 Group warn.",
-            "required": false,
-            "value": "default"
-        },
-        
-        "WARN_MSG_4": {
-            "description": "Set You 4 Group warn.",
+            "description": "Set You  Group Name.",
             "required": false,
             "value": "default"
         },
@@ -141,7 +109,6 @@
         "BLOCK_CHAT": {
             "description": "Select the chat where the bot does not work. Ex: 947xxxxxxxx && 947xxxxxxxx හෝ 947xxxxxxxx,947xxxxxxxx",
             "required": false,
-            "value": "no chats added"
         },
         "UNMUTE_MESSAGE": {
             "description": "Message received when unmuteing a group.",
@@ -172,11 +139,7 @@
             "description": "REPLY ANYONE MSG FOR VOICE ( THIS FEATURE coming soon )",
             "required": true,
             "value": "false"
-        },
-        "VOICE_CHAT_TYPE": {
-            "description": "AUTO VOICE REPLY VOICE SOUND ( baby , boy , girl ) COMING SOON..",
-            "required": true,
-            "value": "girl"
+
         },
         "WELCOME_LOGO": {
             "description": "To change the welcome message video, enter your video link below",
@@ -235,7 +198,7 @@
         "CAPTION": {
             "description": "LOGO MAKER CAPTION",
             "required": true,
-            "value": "   ▷ ᴹᴬᴰᴱ 🄱🅈 Ｔ-ＲＥＸ │"
+            "value": "   ▷ ᴹᴬᴰᴱ 🄱🅈 [🇱🇰𝐊𝐢𝐧𝐠 𝐁𝐨𝐭✌️] աɦ𝐚𝐭𝐬𝐚𝐩𝐩 𝐔𝐬𝐞𝐫 𝐁𝐨𝐭  "
         },
         "COFFEEHOUSE_API_KEY": {
             "description": "Give it up. We give you this.",
