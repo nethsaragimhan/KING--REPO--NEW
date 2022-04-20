@@ -127,7 +127,6 @@ ${chalk.blue.italic('🇱🇰 Connecting to WhatsApp...▶')}`);
                 require('./plugins/' + plugin);
             }
         });
-// ════════════════════PLUGGINS SUCCESS🍁🍁🍁
         console.log(
             chalk.green.bold(' [🇱🇰𝐊𝐢𝐧𝐠 𝐁𝐨𝐭✌️] WHATSAPP BOT WORKING!▷')
        );
